@@ -31,7 +31,7 @@ app.use(cors({ origin: allowedOrigins }));
 
 app.use(express.static('public'));
 app.use(cookieParser());
-app.use(express.json({ limit: '10kb' }));
+app.use(express.json());
 
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
